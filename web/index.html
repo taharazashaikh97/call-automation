@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Automation AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Call Automation AI</h1>
+      <p class="subtitle">Simulate an outbound call and get automated next-step actions.</p>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <div class="grid">
+          <label>Name <input id="name" value="Priya" /></label>
+          <label>Phone <input id="phone" value="+1-555-1000" /></label>
+          <label>Company <input id="company" value="Nimbus Health" /></label>
+          <label>Agent Name <input id="agent" value="Jordan" /></label>
+        </div>
+        <button id="generate">Generate Opening Line</button>
+        <p id="opening" class="output"></p>
+      </section>
+
+      <section class="card">
+        <h2>Customer Reply</h2>
+        <label>
+          Reply text
+          <textarea id="reply" rows="4" placeholder="e.g. Call me next week"></textarea>
+        </label>
+        <button id="analyze">Analyze Reply</button>
+
+        <div id="result" class="result hidden">
+          <p><strong>Intent:</strong> <span id="intent"></span></p>
+          <p><strong>Status:</strong> <span id="status"></span></p>
+          <p><strong>Action:</strong> <span id="action"></span></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
